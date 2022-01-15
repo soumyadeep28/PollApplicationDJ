@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Questions</h2>
+
+<div class="row">
+    <ul class="collection with-header">
+       {% for que in questions %}
+        <a href="{% url 'questions' que.slug %}">
+            <li class="collection-item"> {{ que.content }} </li>
+        </a>
+        {% endfor %}
+      </ul>
+            
+
+</div>
+{% endblock %}

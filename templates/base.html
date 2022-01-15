@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             
+     <nav>
+        <div class="nav-wrapper ">
+          <a href="/main" class="brand-logo"> Polling Application </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          
+            <li><a href="#!">Questions</a></li>
+            <li><a href="#!">Leadboard</a></li>
+          </ul>            
+        </div>
+      </nav>
+   
+</head>
+<body>
+    <div class="container">
+        {% block content %}  {% endblock %}
+    </div>
+    
+    
+</body>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Polling </h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2022 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+</html>

@@ -28,6 +28,16 @@ class Details(SingleObjectMixin ,  FormView):
         obj.save()
         return HttpResponseRedirect('/main')
 
+    def get_context_data(self, **kwargs) :
+        data = super().get_context_data(**kwargs) #it is dictionary
+        data['answer'] = models.Answer.objects.get(
+            question = self.get_object(),
+            user = self.request.user 
+        )
+        return data 
+
+
+ 
     def post(self, request, *args, **kwargs) :
         self.object = self.get_object()
         return super().post(request, *args, **kwargs)
